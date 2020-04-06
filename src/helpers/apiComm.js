@@ -9,13 +9,13 @@ API Communication Helper Functions | YouTube Abbreviated | Unit 4 Assessment
     import axios from 'axios';
 
     // local
-    import myKey from './secrets.js';
+    import apiKey from './secrets.js';
 
 
 /* FETCHES */
 export const getApiSearch = async (search) => {
   const baseUrl = `https://www.googleapis.com/youtube/v3/search`;
-  const prepParams = `?part=snippet&key=${myKey}&maxResults=8`;
+  const prepParams = `?part=snippet&key=${apiKey}&maxResults=8`;
   const prefixSearch = `&q=`;
   const url = baseUrl + prepParams + prefixSearch + search;
 
@@ -29,7 +29,7 @@ export const getApiSearch = async (search) => {
 
 export const getApiOneSnippet = async (videoId) => {
   const baseUrl = `https://www.googleapis.com/youtube/v3/videos`;
-  const prepParams = `?part=snippet&key=${myKey}&maxResults=1`;
+  const prepParams = `?part=snippet&key=${apiKey}&maxResults=1`;
   const prefixId = `&id=`;
   const url = baseUrl + prepParams + prefixId + videoId;
 
