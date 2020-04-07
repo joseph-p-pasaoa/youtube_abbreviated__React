@@ -24,6 +24,7 @@ export const getApiSearch = async (search) => {
     return response.data.items;
   } catch (err) {
     console.log("error in API get: ", err);
+    throw (err);
   }
 }
 

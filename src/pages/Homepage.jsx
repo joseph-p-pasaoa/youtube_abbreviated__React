@@ -60,12 +60,16 @@ export default class Homepage extends Component {
 
 
   getSearchResults = async (search) => {
-    const results = await getApiSearch(search);
-    this.setState({
-        errorMessage: "",
-        results: results,
-        isBeginning: false
-    });
+    try {
+      const results = await getApiSearch(search);
+      this.setState({
+          errorMessage: "",
+          results: results,
+          isBeginning: false
+      });
+    } catch (err) {
+      this.setState({ errorMessage: "server connection is down. please try again later" });
+    }
   }
 
 
@@ -73,7 +77,7 @@ export default class Homepage extends Component {
     const { searchTxt, errorMessage, results, isBeginning } = this.state;
 
     let listResults = null;
-    if (results.length) {
+    if (results && results.length) {
       listResults = results.map((result, i) => {
           const videoId = result.id.videoId;
           const title = result.snippet.title;
@@ -95,7 +99,7 @@ export default class Homepage extends Component {
     let showing = null;
     if (isBeginning) {
       showing = <p className="result-response">Search for videos above!</p>;
-    } else if (!results.length) {
+    } else if (results && !results.length) {
       showing = <p className="result-response">Sorry, no search results found. Try your search again above.</p>;
     } else {
       showing = listResults;

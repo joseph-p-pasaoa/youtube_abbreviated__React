@@ -24,9 +24,8 @@ const Aboutpage = () => {
           YouTube Abbreviated takes the user's inputed search and returns eight
           of the top results from the YouTube API (Thanks, 
             YouTube). 
-          The user is then able to watch any of the results in the video 
-          result's own page which allows comments to be submitted and saved 
-          (temporarily for now).
+          The user is then able to watch any of the results in a separate single
+          video page which allows comments to be submitted and displayed.
         </p>
 
         <p style={{color: "#ccc"}}>
@@ -37,8 +36,8 @@ const Aboutpage = () => {
         </p>
           
         <p>
-          YouTube Abbreviated is at it's core a kick-a** React app developed
-          under the shadow of the Unit 4 Assessment Component of the famed
+          YouTube Abbreviated is at it's core a clean React app developed
+          under the shadow of the Technical Mastery Assessment Component of the famed
           Pursuit Full-Stack Web Development Fellowship real-life app.
         </p>
         
