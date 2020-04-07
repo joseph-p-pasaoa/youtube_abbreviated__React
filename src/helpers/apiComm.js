@@ -5,11 +5,11 @@ API Communication Helper Functions | YouTube Abbreviated | Unit 4 Assessment
 
 
 /* IMPORTS */
-    // external
-    import axios from 'axios';
+// external
+import axios from 'axios';
 
-    // local
-    import apiKey from './secrets.js';
+// local
+const apiKey = "";
 
 
 /* FETCHES */
