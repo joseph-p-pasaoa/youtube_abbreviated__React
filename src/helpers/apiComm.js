@@ -9,7 +9,7 @@ API Communication Helper Functions | YouTube Abbreviated | Unit 4 Assessment
 import axios from 'axios';
 
 // local
-const apiKey = "";
+const apiKey = "AIzaSyBR1wNZpGFsx28P15aNvlbooi1lo4yfKFc";
 
 
 /* FETCHES */
